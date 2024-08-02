@@ -1,0 +1,14 @@
+
+						CUBE EYE 3D DEPTH CAMERA
+
+						http://www.cube-eye.co.kr
+				Cube Eye, the perfect solution for your business.
+			Copyright : Copyright 2015 meerecompany. All rights reserved.
+
+
+* author	: erato
+* release 	: v2.3.13
+* date 		: 2023-05-19
+
+* update
+		1. Fixed a bug that returns '(0, 0)' the first time when calling the fov() function in 'NetworkClientCamera'.

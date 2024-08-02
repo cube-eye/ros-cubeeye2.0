@@ -1,0 +1,14 @@
+prefix=/home/kimj/src/cubeeye2.0/thirdparty/target/x86_64-ubuntu-linux-20_04/libffmpeg
+exec_prefix=${prefix}
+libdir=/home/kimj/src/cubeeye2.0/thirdparty/target/x86_64-ubuntu-linux-20_04/libffmpeg/lib
+includedir=/home/kimj/src/cubeeye2.0/thirdparty/target/x86_64-ubuntu-linux-20_04/libffmpeg/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.134.100
+Requires: 
+Requires.private: libswresample >= 3.9.100, libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -llzma -lz
+Cflags: -I${includedir}

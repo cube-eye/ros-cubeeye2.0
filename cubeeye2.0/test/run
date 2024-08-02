@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+ LD_LIBRARY_PATH=../lib:../thirdparty/libcppunit/lib:../thirdparty/libusb/lib:../thirdparty/liblive555/lib/Release:../thirdparty/libffmpeg/lib:../thirdparty/libopencv/lib ./CubeEyeUnitTest $@

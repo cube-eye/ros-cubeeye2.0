@@ -1,0 +1,11 @@
+<launch>
+    <arg name="pkg_name" default="cubeeye_camera"/>
+
+    <node name="cubeeye_camera" pkg="$(arg pkg_name)" type="cubeeye_camera_node" output="screen">
+        <param name="pkg_name" value="$(arg pkg_name)"/>
+    </node>
+    <!-- scan camera, connect the first one and run with 6(depth and amplitude) -->
+    <node pkg="rosservice" type="rosservice" name="scan" args="call --wait /cubeeye_camera_node/scan" />
+    <node pkg="rosservice" type="rosservice" name="connect" args="call --wait /cubeeye_camera_node/connect 0" />
+    <node pkg="rosservice" type="rosservice" name="run" args="call --wait /cubeeye_camera_node/run 6" />
+</launch>
